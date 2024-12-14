@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Animation</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+<style>
+.dv1
+{
+width:100px;
+height:100px;
+margin-left:400px;
+background-color:red;
+border-radius:50%;
+margin-top:200px;
+position:relative;
+animation:test 10s linear 0s infinite alternate;
+}
+@keyframes test
+{
+0%{left:0px;background-color:red;}
+10%{left:50px;background-color:green;}
+25%{left:100px;background-color:yellow;}
+25%{left:0px;background-color:blue;}
+}
+</style>
+</head>
+<body>
+<div class="dv1"><img src="file://C:/internship/html/Images/1.jpeg" width="100" height="100"></div>
+</body>
+</html>

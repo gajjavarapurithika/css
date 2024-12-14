@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel</title>
+  <style>
+    .puff-in-center {
+      -webkit-animation: puff-in-center .7s cubic-bezier(.47,0.000,.745,.715) both;
+      animation: puff-in-center .7s cubic-bezier(.47,0.000,.745,.715) both;
+    }
+
+    @-webkit-keyframes puff-in-center {
+      0% {
+        -webkit-transform: scale(2);
+        transform: scale(2);
+        -webkit-filter: blur(4px);
+        filter: blur(4px);
+        opacity: 0;
+      }
+      100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-filter: blur(0);
+        filter: blur(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes puff-in-center {
+      0% {
+        -webkit-transform: scale(2);
+        transform: scale(2);
+        -webkit-filter: blur(4px);
+        filter: blur(4px);
+        opacity: 0;
+      }
+      100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-filter: blur(0);
+        filter: blur(0);
+        opacity: 1;
+      }
+    }
+
+    .h1 {
+      display: flex;               /* Use flexbox to align items inline */
+      justify-content: space-between; /* Space out the title and buttons */
+      align-items: center;         /* Vertically center the items */
+      color: purple;
+      text-decoration: underline;
+      font-family: "Gill Sans Extrabold", sans-serif;
+      padding: 20px;               /* Add some padding for better spacing */
+    }
+
+    .parent {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(0, 1fr);
+      gap: 8px;
+      background-color: white;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial;
+      font-size: 17px;
+    }
+
+    .container {
+      position: relative;
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+
+    .container img {
+      vertical-align: middle;
+      width: 100%;
+    }
+
+    .container .content {
+      position: absolute;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      color: #f1f1f1;
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Styling for buttons in the header */
+    .btn-header {
+      background-color: purple;  /* Button color */
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-header:hover {
+      background-color:green;
+    }
+    
+    .parent2{
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+      gap: 0px;
+      border-radius:5px;
+    }
+
+    .container1{
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .image-container {
+      flex: 0 0 300px;
+      margin-right: 20px;
+    }
+
+    /* Resize the image for Mumbai */
+    .img1{
+      width: 100%;  /* Set image to take full width of the container */
+      max-width: 250px;  /* Limit the maximum width to 250px */
+      height:100%;  /* Maintain the aspect ratio */
+    }
+
+    .text-container {
+      flex: 1;
+    }  
+  </style>
+</head>
+<body>
+
+<div class="parent">
+  <div class="puff-in-center">
+    <div class="h1">
+      <!-- Grand Hotel title -->
+      <h1>Grand Hotel</h1>
+      <!-- Add two buttons inline -->
+      <div>
+        <button class="btn-header">Login</button>
+        <button class="btn-header">SignUp</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <img src="file://C:/internship/css/project2/images/1.jpg" alt="Notebook">
+  <div class="content">
+    <h1>Welcome to our Hotel</h1>
+    <p>Here You can view the Comfortable rooms with AC's and Wonderful view of nature. Our hotel is Embedded with nature.</p>
+  </div>
+</div>
+<center><h2>Choose Your Own Destination</h2></center>
+<div class="container1">
+    <div class="image-container">
+        <img src="file://C:/internship/html/Images/1.jpeg" alt="Gateway of India, Mumbai" class="img1">
+    </div>
+    <div class="text-container">
+        <div class="img1">
+        <h1 style="font-size:13px;margin-bottom:10px">Mumbai</h1>
+        <p style="font-size:8px"> 5 Hotels</p></div>
+    </div>
+</div>
+</body>
+</html>

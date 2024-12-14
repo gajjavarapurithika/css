@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Grid</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<style type="text/css">
+.container
+{
+display:grid;
+grid-template-columns:[start sidebar-start]3fr[sidebar-end content-start]5fr[content-end ads-start]3fr[end ads-end];
+grid-template-rows:[start header-start]auto[header-end content -start]auto[content-end footer-start]auto[end footer-end];
+}
+.header
+{
+grid-column:start/end;
+grid-row:start/header-end;
+background:cyan;
+text-align:center;
+}
+.articles
+{
+grid-column:start/sidebar-end;
+grid-row:header-end/footer-start;
+background:tomato;
+}
+.content
+{
+grid-column:content-start/content-end;
+grid-row:content-start/content-end;
+}
+.footer
+{
+grid-column:start/end;
+grid-row:footer-start/footer-end;
+}
+.ads
+{
+grid-column:ads-start/end;
+grid-row:header-end/footer-start;
+display:block;
+background:tomato;
+}
+</style>
+</head>
+<body bgcolor:tomato>
+<div class="container">
+<div class="item header">
+<img src="file://C:/internship/html/Images/logo4.gif">
+</div>
+<div class="item content">
+<iframe name="c" width="300" height="200"></iframe>
+</div>
+<div class="item articles"><a href="https://stories.eenadu.net" target="c"><h3>EenaduStories</h3></a>
+<a href="https://www.eenadu.net/sunday-magazine" target="c"><h3>Sundaymagazines</h3></a>
+<a href="https://pratibha.eenadu.net" target="c"><h3>Epratibha</h3></a>
+<a href="https://epaper.eenadu.net" target="c"><h3>Epaper</h3></a>
+<a href="https://www.eenaduclassifieds.com"target="c"><h3>classifieds</h3></a>
+<a href="https://www.eenadupellipandiri.net" target="c"><h3>Pellipandri</h3></a>
+</div>
+<div class="item footer">asdfghjkl</div>
+<div class="item ads">
+<a href="https://sakshi.com" target="c"><h3>Sakshi</h3></a>
+<a href="https://www.andhrajyothy.com" target="c"><h3>Andhrajyothy</h3></a>
+<a href="https://epaper.prabhanews.com" target="c"><h3>Andhraprabha</h3></a>
+
+</div>
+</div>
+</body>
+</html>
